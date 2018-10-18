@@ -12,7 +12,7 @@
 ## Proyecto Seleccionado
 **Realizar una prueba de concepto o demo sobre Data Streaming desde Twitter utilizando una de las siguientes tecnologías: Kafka, Storm, Flink o Flume.**
 
-###¿Por qué  seleccionamos este proyecto?
+### ¿Por qué  seleccionamos este proyecto?
 * Nos reunimos a ver opción por opción cuál nos llamaba más la atención de manera que todo el grupo quedara satisfecho con el proyecto a realizar, la mejor opción en la que todos sentimos que nos gustaria más trabajar fue la segunda.
 
 * Comparandola con las demás opciones nos parecio que no era tan complicado de realizar pero tampoco tan facil para un equipo de 3 personas.
@@ -47,3 +47,9 @@ Funciona como un servicio de mensajería, categoriza los mensajes en topics.
 - Escalable y tolerante a fallos.
 
 - Se puede utilizar para servicios de mensajería (tipo ActiveMQ o RabbitMQ), procesamiento de streams, web tracking, trazas operacionales, etc.
+
+## Referencias
+
+> * ¿Qué son los datos de streaming? – Amazon Web Services (AWS). (2018). Retrieved from https://aws.amazon.com/es/streaming-data/ .
+
+> *  Primeros pasos con Apache Kafka | adictosaltrabajo. (2018). Retrieved from https://www.adictosaltrabajo.com/tutoriales/kafka-logs/ 
