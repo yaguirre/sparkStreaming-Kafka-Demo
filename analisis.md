@@ -14,7 +14,7 @@ Este será el caso de aplicación que desarrollaremos en el proyecto 3, el objet
 
 ### Arquitectura preliminar de datos
 
-![alt text](https://github.com/yaguirre/sparkStreaming-Kafka-Demo/blob/master/images/arquitectura%20datos%20preeliminar.png)
+![alt text](https://github.com/yaguirre/sparkStreaming-Kafka-Demo/blob/master/images/arquitectura%20de%20datos.png)
 
 ### Fuentes y naturaleza de los datos + Tecnologías a utilizar  
 La fuente de los datos es la red social Twitter, el formato de los datos es no estructurado, son tweets en tiempo real de usuarios que opinan sobre un tópico a analizar.
