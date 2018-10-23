@@ -14,13 +14,25 @@ Este será el caso de aplicación que desarrollaremos en el proyecto 3, el objet
 
 ### Arquitectura preliminar de datos
 
+![alt text](https://github.com/yaguirre/sparkStreaming-Kafka-Demo/blob/master/images/arquitectura%20datos%20preeliminar.png)
+
 ### Fuentes y naturaleza de los datos + Tecnologías a utilizar  
+La fuente de los datos es la red social Twitter, el formato de los datos es no estructurado, son tweets en tiempo real de usuarios que opinan sobre un tópico a analizar.
+Para extraer los datos de Twitter se utilizara tweepy, una librería de python usada para acceder a la  API de Twitter, esta API nos brinda funciones de extracción de tweets en tiempo real (Twitter Streaming API).
+
 
 ### Sistema de ingesta de datos + Tecnologías a utilizar
+Para la ingesta de datos usamos Apache Kafka, una plataforma de streaming distribuida, que usa una mensajería de publicación-suscripción y ofrece un servicio distribuido y replicado. El stream de Twitter, es ingestado por Kafka y enviado como señales a Kafka.
+
+También usaremos Tweepy, la librería de Python para acceder a la API de Twitter y así obtener los tweets 
+
 
 ### Almacenamiento de los datos + Tecnologías a utilizar
+Para el almacenamiento de los datos generados por Spark Streaming utilizaremos HDFS 
+
 
 ### Análisis de datos + Tecnologías a utilizar
+Spark Streaming recibe los datos de Kafka y los procesa con el Spark Engine, para el análisis de los tweets y juzgarlos como positivos o negativos 
 
 ### Referencias
 >  * **Montesinos, L. (2014). ANÁLISIS DE SENTIMIENTOS Y PREDICCIÓN DE EVENTOS EN TWITTER. Santiago de Chile: UNIVERSIDAD DE CHILE FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS. Retrieved from [http://repositorio.uchile.cl/bitstream/handle/2250/130479/cf-montesinos_lg.pdf](http://repositorio.uchile.cl/bitstream/handle/2250/130479/cf-montesinos_lg.pdf)**
