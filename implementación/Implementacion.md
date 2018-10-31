@@ -1,6 +1,6 @@
 # Implementación
 
-### Requisitos:
+### Requisitos
 
 Se debe tener Kafka y Apache Spark instalado en la máquina para que funcione.
 Kafka se puede descargar desde [aquí]( https://kafka.apache.org/downloads.html)
