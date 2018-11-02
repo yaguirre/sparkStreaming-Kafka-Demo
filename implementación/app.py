@@ -62,7 +62,7 @@ if __name__ == '__main__':
     print("API", api)
     
     stream = tweepy.Stream(auth, listener = TweeterStreamListener(api))
-    stream.filter(track=['amor'], languages=['es'])
+    stream.filter(track=['sports', 'play'], languages=['en'])
 
     # Create stream and bind the listener to it
     #stream = tweepy.Stream(auth, listener = TweeterStreamListener(api))
