@@ -23,7 +23,7 @@ Corre el script de python:
 `$ python app.py`
 
 Para verificar que los datos si lleguen a Kafka:
-`$ bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic twitterstream --from-beginning`
+`$ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic twitterstream --from-beginning`
 
 
 
