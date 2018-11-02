@@ -12,24 +12,25 @@ class TweeterStreamListener(tweepy.StreamListener):
         self.api = api
         super(tweepy.StreamListener, self).__init__()
         client = KafkaClient("localhost:9092")
+#        client.ensure_topic_exists("twitterstream")
         self.producer = SimpleProducer(client, async = True,
-                          batch_send_every_n = 1000,
+                          batch_send_every_n = 11,
                           batch_send_every_t = 10)
 
     def on_status(self, status):
         """ This method is called whenever new data arrives from live stream.
         We asynchronously push this data to kafka queue"""
-        msg =  status.text.encode('utf-8')
+        msg = status.text.encode('utf-8')
         try:
-            self.producer.send_messages(b'twitterstream', msg)
-            print("SUCCESS")
+            self.producer.send_messages("twitterstream", msg)
+            print("SUCCESS: " + status.text)
         except Exception as e:
             print(e)
             return False
         return True
 
     def on_error(self, status_code):
-        print("Error received in kafka producer")
+        print("Error received in kafka producer: " + str(status_code))
         return True # Don't kill the stream
 
     def on_timeout(self):
@@ -61,7 +62,7 @@ if __name__ == '__main__':
     print("API", api)
     
     stream = tweepy.Stream(auth, listener = TweeterStreamListener(api))
-    stream.filter(track=['python'])
+    stream.filter(track=['amor'], languages=['es'])
 
     # Create stream and bind the listener to it
     #stream = tweepy.Stream(auth, listener = TweeterStreamListener(api))
