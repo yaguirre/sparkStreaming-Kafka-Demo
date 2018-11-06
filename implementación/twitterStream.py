@@ -28,13 +28,13 @@ def make_plot(counts):
     time = []
 
     for val in counts:
-	positiveTuple = val[0]
-	positiveCounts.append(positiveTuple[1])
-	negativeTuple = val[1]
-	negativeCounts.append(negativeTuple[1])
+        positiveTuple = val[0]
+        positiveCounts.append(positiveTuple[1])
+        negativeTuple = val[1]
+        negativeCounts.append(negativeTuple[1])
 
     for i in range(len(counts)):
-	time.append(i)
+        time.append(i)
 
     posLine = plt.plot(time, positiveCounts,'bo-', label='Positive')
     negLine = plt.plot(time, negativeCounts,'go-', label='Negative')
@@ -44,7 +44,7 @@ def make_plot(counts):
     plt.legend(loc = 'upper left')
     plt.show()
 
-	
+
 def load_wordlist(filename):
     """ 
     This function returns a list or set of words from the given filename.
@@ -61,9 +61,9 @@ def load_wordlist(filename):
 
 def wordSentiment(word,pwords,nwords):
     if word in pwords:
-	return ('positive', 1)
+        return ('positive', 1)
     elif word in nwords:
-	return ('negative', 1)
+        return ('negative', 1)
 
 
 def updateFunction(newValues, runningCount):
