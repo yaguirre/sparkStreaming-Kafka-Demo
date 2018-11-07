@@ -117,6 +117,8 @@ def stream(ssc, pwords, nwords, duration):
     ssc.stop(stopGraceFully = True)
 
     print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!STOPPED!!!!!!!!!!!!!!!!!!!!!!!!")
+
+    counts = [x for x in counts if x]
     
     return counts
 

@@ -60,10 +60,15 @@ if __name__ == '__main__':
     api = tweepy.API(auth)
 
     print("API", api)
-    
-    stream = tweepy.Stream(auth, listener = TweeterStreamListener(api))
-    stream.filter(track=['sports', 'play'], languages=['en'])
 
+    try:
+        stream = tweepy.Stream(auth, listener = TweeterStreamListener(api))
+        stream.filter(track=['soccer', 'soccer good', 'soccer bad', 'soccer game', 'soccer match',
+                             'uefa', 'conmebol', 'copa libertadores', 'fifa', 'world cup', 'soccer win',
+                             'soccer lose', 'soccer team' 'goal'], languages=['en'])
+    except tweepy.TweepError as e:
+        print(e)
+        
     # Create stream and bind the listener to it
     #stream = tweepy.Stream(auth, listener = TweeterStreamListener(api))
 

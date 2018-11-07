@@ -36,3 +36,5 @@ Spark Streaming recibe los datos de Kafka y los procesa con el Spark Engine, par
 
 ### Referencias
 >  * **Montesinos, L. (2014). ANÁLISIS DE SENTIMIENTOS Y PREDICCIÓN DE EVENTOS EN TWITTER. Santiago de Chile: UNIVERSIDAD DE CHILE FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS. Retrieved from [http://repositorio.uchile.cl/bitstream/handle/2250/130479/cf-montesinos_lg.pdf](http://repositorio.uchile.cl/bitstream/handle/2250/130479/cf-montesinos_lg.pdf)**
+
+> * **El trabajo fue desarrollado basandonos en el siguiente repositorio de análisis de sentimientos [https://github.com/sridharswamy/Twitter-Sentiment-Analysis-Using-Spark-Streaming-And-Kafka](https://github.com/sridharswamy/Twitter-Sentiment-Analysis-Using-Spark-Streaming-And-Kafka)**
